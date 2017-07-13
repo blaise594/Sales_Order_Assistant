@@ -1,0 +1,100 @@
+@model IEnumerable<SOA.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Your almost done!</h2>
+<h4>Press continue below to add additional information to your order. </h4>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Qty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>               
+                <th>
+                    @Html.DisplayNameFor(model => model.MfgPn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mfg)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InternalPn)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>                
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>               
+                <th>
+                    @Html.DisplayNameFor(model => model.PurchaseTerms)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateNeeded)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipCourier)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipMethod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlaceOrderDate)
+                </th>                
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.MfgPn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mfg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InternalPn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>           
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>           
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseTerms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateNeeded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipCourier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceOrderDate)
+            </td>            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">
+                    <input type="submit" value="Continue" class="btn btn-default" />
+                </a>                             
+                
+                @*<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

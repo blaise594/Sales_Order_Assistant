@@ -1,0 +1,6 @@
+@model SOA.Models.Order
+
+<form asp-controller="BuyNow" asp-action="Index">
+    @Html.HiddenFor(m => m.Id, Model.Id)
+    <input type="submit" value="Buy Now" class="btn btn-default" />
+</form>

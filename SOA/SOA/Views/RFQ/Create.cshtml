@@ -1,0 +1,104 @@
+@model SOA.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container-fluid">
+    @Html.Partial("~/Views/Shared/_CustomerTabs.cshtml")
+    <div class="jumbotron">
+        <div class="media center-block">
+            <div class="col-lg-12 ">
+                <div class="badge">
+                    <h2>Thank you for choosing Sample Components!</h2>
+                </div>                
+            </div>
+        </div>
+
+    </div> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>To get a quote, please fill in all the information on this form; for other options see tabs above. </h4>
+
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="body">
+                        <form asp-action="Create">
+                            <div class="form-horizontal">
+
+
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Qty" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="Qty" class="form-control" />
+                                        <span asp-validation-for="Qty" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TargetPrice" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="TargetPrice" class="form-control" />
+                                        <span asp-validation-for="TargetPrice" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="MfgPn" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="MfgPn" class="form-control" />
+                                        <span asp-validation-for="MfgPn" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Mfg" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="Mfg" class="form-control" />
+                                        <span asp-validation-for="Mfg" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="InternalPn" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="InternalPn" class="form-control" />
+                                        <span asp-validation-for="InternalPn" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Description" class="col-md-2 control-label"></label>
+                                    <div class="col-md-10">
+                                        <input asp-for="Description" class="form-control" />
+                                        <span asp-validation-for="Description" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Create" class="btn btn-default" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <a asp-area="" asp-controller="RFQ" asp-action="Index" class="btn btn-default btn-block">
+
+                    <h4><strong>View Pending Quote Requests</strong></h4>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

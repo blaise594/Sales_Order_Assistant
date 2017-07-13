@@ -1,0 +1,143 @@
+@model IEnumerable<SOA.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container-fluid">
+
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">@Html.Partial("~/Views/Shared/_CustomerTabs.cshtml")</div>
+        <div class="panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-7 col-lg-offset-1"><h2>View your quote requests below.</h2></div>
+                        <div class="col-lg-4">
+                            <h3>
+                                <span class="form-inline">
+
+                                    <input type="search" class="form-control" placeholder="What are you looking for?">
+
+                                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+
+                                <div class="col-lg-8">
+                                    <span class="form-inline">
+                                        <strong>Show</strong>
+
+
+                                        <select class="form-control">
+                                            <option>Active Requests</option>
+                                            <option>Inactive Requests</option>
+                                            <option>Rejected Requests</option>
+                                        </select>
+
+                                        <strong>from</strong>
+
+                                        <select class="form-control">
+                                            <option>past 30 days</option>
+                                            <option>past 60 days</option>
+                                            <option>past 90 days</option>
+                                            <option>entire history</option>
+                                        </select>
+
+                                        <button type="button" class="btn btn-default">Go</button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="panel-body">
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.RFQDate)
+                                                </th>
+
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Qty)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.TargetPrice)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.MfgPn)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Mfg)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.InternalPn)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Description)
+                                                </th>
+                                                <th>
+                                                    @Html.DisplayNameFor(model => model.Status)
+                                                </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+            {
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.RFQDate)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Qty)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.TargetPrice)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.MfgPn)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Mfg)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.InternalPn)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Status)
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           @Html.Partial("~/Views/Shared/_BackToCustomerMenu.cshtml")
+        </div>
+    </div>
+</div>
+
+
+
+
+    
