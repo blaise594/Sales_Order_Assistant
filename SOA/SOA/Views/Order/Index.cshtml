@@ -5,165 +5,217 @@
 }
 
 <div class="container-fluid">
+    @Html.Partial("~/Views/Shared/_CustomerTabs.cshtml")
+    <div class="jumbotron">
+        <div class="media center-block">
+            <div class="media-left">
+                <div class="col-xs-3">
 
-
-
-    <div class="panel panel-default">
-        <div class="panel-heading">@Html.Partial("~/Views/Shared/_CustomerTabs.cshtml")</div>
-        <div class="panel-body">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-lg-7 col-lg-offset-1"><h2>View your orders below.</h2></div>
-                        <div class="col-lg-4">
-                            <h3>
-                                <span class="form-inline">
-
-                                    <input type="search" class="form-control" placeholder="What are you looking for?">
-
-                                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                                </span>
-                            </h3>
-                        </div>
-                    </div>
                 </div>
-                <div class="panel-body">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="row">
+            </div>
+            <div class="media-body">
+                <div class="col-xs-9">
+                    <div class="badge">
+                        <h2>Orders</h2>
+                    </div>
+                    <h4>View your orders below.</h4>
+                </div>
+            </div>
+        </div>
 
-                                <div class="col-lg-8">
-                                    <span class="form-inline">
-                                        <strong>Show</strong>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <span class="form-inline">
+                        <strong>Show</strong>
 
 
-                                        <select class="form-control">
-                                            <option>Pending Orders</option>
-                                            <option>Confirmed Orders</option>
-                                            <option>Shipped Orders</option>
-                                        </select>
+                        <select class="form-control">
+                            <option>Pending Orders</option>
+                            <option>Confirmed Orders</option>
+                            <option>Shipped Orders</option>
+                        </select>
 
-                                        <strong>from</strong>
+                        <strong>from</strong>
 
-                                        <select class="form-control">
-                                            <option>past 30 days</option>
-                                            <option>past 60 days</option>
-                                            <option>past 90 days</option>
-                                            <option>entire history</option>
-                                        </select>
+                        <select class="form-control">
+                            <option>past 30 days</option>
+                            <option>past 60 days</option>
+                            <option>past 90 days</option>
+                            <option>entire history</option>
+                        </select>
 
-                                        <button type="button" class="btn btn-default">Go</button>
-                                    </span>
+                        <button type="button" class="btn btn-default">Go</button>
+                    </span>
+                </div>
+                <div class="col-lg-4">
+
+                </div>
+            </div>
+
+            <div class="panel-body">
+
+
+                @foreach (var item in Model)
+            {
+                    <div class="row">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <strong>@Html.DisplayNameFor(model => model.Qty)</strong>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.Qty)
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <ul style="list-style: none">
+
+                                            <li>
+                                                <strong>@Html.DisplayNameFor(model => model.Price)</strong>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.Price)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <strong> @Html.DisplayNameFor(model => model.MfgPn)</strong>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.MfgPn)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <span><strong> @Html.DisplayNameFor(model => model.Mfg)</strong></span>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.Mfg)
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="col-xs-2">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <strong> @Html.DisplayNameFor(model => model.Status)</strong>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.Status)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-1 ">
+                                        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4">
 
-                                </div>
                             </div>
 
                             <div class="panel-body">
-
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        @foreach (var item in Model)
-            {
+                                    <div class="col-xs-3">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <strong> @Html.DisplayNameFor(model => model.PlaceOrderDate)</strong>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.PlaceOrderDate)
+                                            </li>
+                                        </ul>
+                                    </div>
 
+                                    <div class="col-xs-1">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <span><strong>@Html.DisplayNameFor(model => model.Id)</strong></span>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.Id)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <span><strong> @Html.DisplayNameFor(model => model.InternalPn)</strong></span>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.InternalPn)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <ul style="list-style: none">
+                                            <li>
+                                                <span><strong> @Html.DisplayNameFor(model => model.Description)</strong></span>
+                                            </li>
+                                            <li>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-1">
 
-                                            <div class="panel panel-default">
+                                        <a class="menu-bar" data-toggle="collapse" href="#menu">
+                                            Details
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="collapse menu" id="menu">
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="panel panel-primary">
                                                 <div class="panel-heading">
                                                     <div class="row">
-                                                        <div class="col-xs-1">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <strong>@Html.DisplayNameFor(model => model.Qty)</strong>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.Qty)
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xs-1 ">
-                                                            <ul style="list-style: none">
-
-                                                                <li>
-                                                                    <strong>@Html.DisplayNameFor(model => model.Price)</strong>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.Price)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xs-4 ">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <strong> @Html.DisplayNameFor(model => model.MfgPn)</strong>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.MfgPn)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xs-1 col-xs-pull-1">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <span><strong> @Html.DisplayNameFor(model => model.Mfg)</strong></span>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.Mfg)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-xs-3">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <strong> @Html.DisplayNameFor(model => model.PlaceOrderDate)</strong>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.PlaceOrderDate)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <div class="col-lg-1">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <strong> @Html.DisplayNameFor(model => model.Status)</strong>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.Status)
-                                                                </li>
-                                                            </ul>
-
+                                                        <div class="col-xs-11">
+                                                            <h4 class="panel-title"><strong>Shipping Information</strong></h4>
                                                         </div>
                                                         <div class="col-xs-1 ">
                                                             <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
                                                         </div>
-                                                    </div>                                                    
+                                                    </div>
                                                 </div>
-                                                <div class="panel-body">
 
+                                                <div class="panel-body">
                                                     <div class="row">
-                                                        <div class="col-xs-3">
+                                                        <div class="col-xs-4">
                                                             <ul style="list-style: none">
                                                                 <li>
-                                                                    <span><strong> @Html.DisplayNameFor(model => model.Description)</strong></span>
+                                                                    <span><strong> Shipping Address</strong></span>
                                                                 </li>
                                                                 <li>
-                                                                    @Html.DisplayFor(modelItem => item.Description)
+
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="col-xs-3">
+                                                        <div class="col-xs-4">
                                                             <ul style="list-style: none">
                                                                 <li>
-                                                                    <span><strong> @Html.DisplayNameFor(model => model.InternalPn)</strong></span>
+                                                                    <span><strong> Billing Address</strong></span>
                                                                 </li>
                                                                 <li>
-                                                                    @Html.DisplayFor(modelItem => item.InternalPn)
+
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="col-xs-3">
+                                                        <div class="col-xs-4">
                                                             <ul style="list-style: none">
                                                                 <li>
                                                                     <span><strong> @Html.DisplayNameFor(model => model.DateConfirmed)</strong></span>
@@ -173,28 +225,8 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div class="col-xs-3">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <span><strong>@Html.DisplayNameFor(model => model.TrackNumber)</strong></span>
-                                                                </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.TrackNumber)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-xs-3">
-                                                            <ul style="list-style: none">
-                                                                <li>
-                                                                    <span><strong> Shipping Address</strong></span>
-                                                                </li>
-                                                                <li>
-                                                                   
-                                                                </li>
-                                                            </ul>
-                                                        </div>
                                                         <div class="col-xs-3">
                                                             <ul style="list-style: none">
                                                                 <li>
@@ -225,45 +257,124 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-xs-12">
+
+                                                        <div class="col-xs-3">
                                                             <ul style="list-style: none">
                                                                 <li>
-                                                                    <span><strong>@Html.DisplayNameFor(model => model.PurchaseTerms)</strong></span>
+                                                                    <span><strong>@Html.DisplayNameFor(model => model.TrackNumber)</strong></span>
                                                                 </li>
                                                                 <li>
-                                                                    @Html.DisplayFor(modelItem => item.PurchaseTerms)
+                                                                    @Html.DisplayFor(modelItem => item.TrackNumber)
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="col-xs-11">
+                                                            <h4 class="panel-title"><strong>@Html.DisplayNameFor(model => model.PurchaseTerms)</strong></h4>
+                                                        </div>
+                                                        <div class="col-xs-1 ">
+                                                            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel-body">
                                                     <div class="row">
                                                         <div class="col-xs-12">
                                                             <ul style="list-style: none">
                                                                 <li>
-                                                                    <span><strong>@Html.DisplayNameFor(model => model.SaleTerms)</strong></span>
+                                                                    <span>@Html.DisplayFor(modelItem => item.PurchaseTerms)</span>
                                                                 </li>
-                                                                <li>
-                                                                    @Html.DisplayFor(modelItem => item.SaleTerms)
-                                                                </li>
+
                                                             </ul>
                                                         </div>
+
                                                     </div>
 
                                                 </div>
-                                            </div>
-                                        }
-                                        @Html.Partial("~/Views/Shared/_BackToCustomerMenu.cshtml")
 
+                                            </div>
+                                        </div>
 
                                     </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <div class="row">
+                                                        <div class="col-xs-11">
+                                                            <h4 class="panel-title"><strong>@Html.DisplayNameFor(model => model.SaleTerms)</strong></h4>
+                                                        </div>
+                                                        <div class="col-xs-1 ">
+                                                            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <ul style="list-style: none">
+                                                                <li>
+                                                                    <span>@Html.DisplayFor(modelItem => item.SaleTerms)</span>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+
                                 </div>
+
+
+
+
+
                             </div>
                         </div>
+
+
                     </div>
-                </div>
+
+
+
+
+
+
+
+                }
+
             </div>
+
+
+
         </div>
     </div>
+
+    @Html.Partial("~/Views/Shared/_BackToCustomerMenu.cshtml")
+
 </div>

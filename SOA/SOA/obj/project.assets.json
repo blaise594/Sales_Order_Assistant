@@ -11000,10 +11000,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danny\\tiy\\SalesOrderAssistant\\SOA\\SOA\\SOA.csproj",
+      "projectUniqueName": "C:\\Users\\Danny\\tiy\\SOA\\SOA\\SOA\\SOA.csproj",
       "projectName": "SOA",
-      "projectPath": "C:\\Users\\Danny\\tiy\\SalesOrderAssistant\\SOA\\SOA\\SOA.csproj",
-      "outputPath": "C:\\Users\\Danny\\tiy\\SalesOrderAssistant\\SOA\\SOA\\obj\\",
+      "projectPath": "C:\\Users\\Danny\\tiy\\SOA\\SOA\\SOA\\SOA.csproj",
+      "outputPath": "C:\\Users\\Danny\\tiy\\SOA\\SOA\\SOA\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
