@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SOA.Data;
 
 namespace SOA.Controllers
 {
+    [Authorize(Roles = "Manager")]
     public class RejectRFQController : Controller
     {
         private readonly ApplicationDbContext _context;
