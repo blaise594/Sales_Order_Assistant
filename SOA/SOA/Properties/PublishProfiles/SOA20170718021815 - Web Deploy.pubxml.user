@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAElC5ImeQrku/IsryG2TzPQAAAAACAAAAAAAQZgAAAAEAACAAAADqRIddAIqGZwqgZI0nsjegdBooFWPMV7CBO5a3E5nhtAAAAAAOgAAAAAIAACAAAAA6eL5ZCs0y+ekIISrgPuDIAeAblz1e6M7/MGRoKAPJXYAAAAClPNDqBA/i7k/TDeoWOB+vh50QMmloJciLW0euK0WscBM2dpjrndjjkO7t5G+v5Pvn0CABzhc3wP0mJj0l1LQB71sr+Vy1u84i8kTp5Wl+I/EI48XGoHxfIAbVdVT9Py01o2gi2/phXk0vC2xc+By8Ki72OEwb2a0Ac1quP5jydEAAAAAORAnwJZdcNBQnMb0ZhJwBySTb08pzUFagjd95dezoMoFJzj8I49oxDY4nVq3Xdww4rKaLag8Bg83q30/MQ8WL</EncryptedPassword>
+    <_NewBackgroundProfile>False</_NewBackgroundProfile>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=tcp:salesorderassistant.database.windows.net,1433;Initial Catalog=SOA;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

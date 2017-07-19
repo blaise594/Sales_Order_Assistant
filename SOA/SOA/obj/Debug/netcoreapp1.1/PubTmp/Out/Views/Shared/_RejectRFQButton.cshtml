@@ -1,0 +1,6 @@
+@model SOA.Models.Order
+
+<form asp-controller="RejectRFQ" asp-action="Index">
+    @Html.HiddenFor(m => m.Id, Model.Id)
+    <input type="submit" value="Reject" class="btn btn-default" />
+</form>

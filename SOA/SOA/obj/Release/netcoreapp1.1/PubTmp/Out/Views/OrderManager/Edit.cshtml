@@ -1,0 +1,162 @@
+@model SOA.Models.Order
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Order</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Qty" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Qty" class="form-control" />
+                <span asp-validation-for="Qty" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Status" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="Status" class="form-control"></select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TargetPrice" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TargetPrice" class="form-control" />
+                <span asp-validation-for="TargetPrice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MfgPn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MfgPn" class="form-control" />
+                <span asp-validation-for="MfgPn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Mfg" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Mfg" class="form-control" />
+                <span asp-validation-for="Mfg" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InternalPn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InternalPn" class="form-control" />
+                <span asp-validation-for="InternalPn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="RFQDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="RFQDate" class="form-control" />
+                <span asp-validation-for="RFQDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="QuoteDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="QuoteDate" class="form-control" />
+                <span asp-validation-for="QuoteDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PurchaseTerms" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PurchaseTerms" class="form-control" />
+                <span asp-validation-for="PurchaseTerms" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DateNeeded" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DateNeeded" class="form-control" />
+                <span asp-validation-for="DateNeeded" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ShipCourier" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ShipCourier" class="form-control" />
+                <span asp-validation-for="ShipCourier" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ShipMethod" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ShipMethod" class="form-control" />
+                <span asp-validation-for="ShipMethod" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="PlaceOrderDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PlaceOrderDate" class="form-control" />
+                <span asp-validation-for="PlaceOrderDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SaleTerms" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SaleTerms" class="form-control" />
+                <span asp-validation-for="SaleTerms" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ShipDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ShipDate" class="form-control" />
+                <span asp-validation-for="ShipDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="TrackNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TrackNumber" class="form-control" />
+                <span asp-validation-for="TrackNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DateConfirmed" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DateConfirmed" class="form-control" />
+                <span asp-validation-for="DateConfirmed" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

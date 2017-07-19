@@ -1,0 +1,83 @@
+@model SOA.Models.Order
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Order</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Qty" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Qty" class="form-control" />
+                <span asp-validation-for="Qty" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Status" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="Status" class="form-control">
+                    <option>ActiveRFQ</option>
+                    <option>InactiveRFQ</option>
+                    <option>RejectedRFQ</option>
+                    <option>ActiveQuote</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>            
+        </div>
+        <div class="form-group">
+            <label asp-for="TargetPrice" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="TargetPrice" class="form-control" />
+                <span asp-validation-for="TargetPrice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MfgPn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="MfgPn" class="form-control" />
+                <span asp-validation-for="MfgPn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Mfg" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Mfg" class="form-control" />
+                <span asp-validation-for="Mfg" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="InternalPn" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="InternalPn" class="form-control" />
+                <span asp-validation-for="InternalPn" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>       
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

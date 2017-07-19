@@ -1,0 +1,135 @@
+@model SOA.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container-fluid">
+    <h2>Details</h2>
+
+
+    <h4>View order details below.</h4>
+    <hr />
+
+    <div class="col-lg-12">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Qty)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Qty)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TargetPrice)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TargetPrice)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MfgPn)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MfgPn)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Mfg)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Mfg)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.InternalPn)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.InternalPn)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.RFQDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.RFQDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.QuoteDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.QuoteDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PurchaseTerms)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PurchaseTerms)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DateNeeded)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DateNeeded)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ShipCourier)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ShipCourier)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ShipMethod)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ShipMethod)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PlaceOrderDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PlaceOrderDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.SaleTerms)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SaleTerms)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ShipDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ShipDate)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TrackNumber)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TrackNumber)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DateConfirmed)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DateConfirmed)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
