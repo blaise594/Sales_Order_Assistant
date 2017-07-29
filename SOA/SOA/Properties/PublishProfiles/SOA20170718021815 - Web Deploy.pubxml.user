@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Server=tcp:salesorderassistant.database.windows.net,1433;Initial Catalog=SOA;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+      <Value>Server=tcp:salesorderassistantserver.database.windows.net,1433;Initial Catalog=salesorderassistant;Persist Security Info=False;User ID=danielbrogers594;Password=loopoop-1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
 </Project>

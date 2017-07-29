@@ -4,11 +4,16 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
+
+    
+        <h2>Quote</h2>
+    
+    
+
 
 <form asp-action="Edit">
     <div class="form-horizontal">
-        <h4>Order</h4>
+        <h4>Fill out the form below to verify your quote.</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <input type="hidden" asp-for="Id" />
@@ -65,6 +70,13 @@
             <div class="col-md-10">
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SaleTerms" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SaleTerms" class="form-control" />
+                <span asp-validation-for="SaleTerms" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
