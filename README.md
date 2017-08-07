@@ -17,7 +17,7 @@
   The information from the form is then automatically populated into a customized database system.     
 ## Customer logs in  and requests a quote DEMO
 ![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOACustomerLoginandRFQ.gif?raw=true)
-## Manager logs in, views quote requests, rejects a request, then quotes a request DEMO
+## Manager logs in, rejects a customer request, then creates a quote DEMO
 ![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOAManagerLoginandRFQ.gif?raw=true)
 ## Customer views quote and places order DEMO
 ![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOACustomerViewQuotes.gif?raw=true)
