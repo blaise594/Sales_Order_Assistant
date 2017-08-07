@@ -18,3 +18,13 @@ C:\Users\Danny\tiy\SOA\SOA\SOA\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.c
 C:\Users\Danny\tiy\SOA\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.AssemblyInfo.cs
 C:\Users\Danny\tiy\SOA\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.dll
 C:\Users\Danny\tiy\SOA\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.pdb
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\bin\Debug\netcoreapp1.1\SOA.deps.json
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\bin\Debug\netcoreapp1.1\SOA.runtimeconfig.json
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\bin\Debug\netcoreapp1.1\SOA.runtimeconfig.dev.json
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\bin\Debug\netcoreapp1.1\SOA.dll
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\bin\Debug\netcoreapp1.1\SOA.pdb
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.csprojResolveAssemblyReference.cache
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.AssemblyInfo.cs
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.dll
+C:\Users\Danny\tiy\Sales-Order-Assistant\SOA\SOA\obj\Debug\netcoreapp1.1\SOA.pdb
