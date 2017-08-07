@@ -15,7 +15,10 @@
   hard to find electronic parts by providing a customer portal where the customer can log in to an account created 
   for them and can send their purchase orders through a form within this portal instead of through email. 
   The information from the form is then automatically populated into a customized database system.     
-## Customer Login  and Request for Quote DEMO
+## Customer logs in  and requests a quote DEMO
 ![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOACustomerLoginandRFQ.gif?raw=true)
-## View Customer Quote and Place Order DEMO
+## Manager logs in views customer's quote requests rejects a request then quotes another request DEMO
+![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOAManagerLoginandRFQ.gif?raw=true)
+## Customer views quote and places order DEMO
 ![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOACustomerViewQuotes.gif?raw=true)
+
