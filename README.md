@@ -16,4 +16,4 @@
   for them and can send their purchase orders through a form within this portal instead of through email. 
   The information from the form is then automatically populated into a customized database system.     
 ## DEMO- Customer Login  and Request for Quote
-![]()
+![](https://github.com/blaise594/Sales_Order_Assistant/blob/master/SOA/media/SOACustomerLoginandRFQ.gif?raw=true)
