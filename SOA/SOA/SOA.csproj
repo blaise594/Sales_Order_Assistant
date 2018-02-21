@@ -13,10 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\images\Quote.PNG" />
     <Content Include="wwwroot\js\panel.js" />
-    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
-    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
